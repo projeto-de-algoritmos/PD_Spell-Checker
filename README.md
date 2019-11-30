@@ -25,8 +25,10 @@ Será gerado durante a execução do programa um arquivo *vocabulary.txt* que gu
 ## Visualização
 
 Abaixo está a saída para o arquivo *to_fix.txt*.
+
 A saída exibe as sugestões de correções para as palavras que o corretor não conhece e também a distância encontrada entre a palavra desconhecida e as sugeridas.
-Por fim, o corretor mostra as palavras desconhecidas que não obtiveram boas sugestões, por terem uma distância maior que 15 entre as palavras conhecidas pelo corretor.
+
+Além disso, o corretor mostra as palavras desconhecidas que não obtiveram boas sugestões, por terem uma distância maior que 15 entre as palavras conhecidas pelo corretor. Por fim, a saída exibe também a contagem de erros, substituições e deleções calculadas pelo algoritmo.
 
 ![output](images/output.png)
 

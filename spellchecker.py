@@ -59,7 +59,7 @@ def calculate_distances(line):
 
                 if distance <= THRESHOLD and distance <= minimum_distances[word_check]:
                     distances[word_check, distance].append(word)
-                    minimum_distances[word_check] = distance
+                minimum_distances[word_check] = min(minimum_distances[word_check], distance)
 
     return distances, minimum_distances
 
