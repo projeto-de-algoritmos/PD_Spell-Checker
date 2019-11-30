@@ -5,16 +5,16 @@ from sys import argv
 import numpy as np
 
 GAP_COST = 4
-MIS_COST = 2
+MIS_COST = 3
 MATCH_COST = 0
-THRESHOLD = 200
+THRESHOLD = 15
 
 
 def get_words(text):
-    return re.findall(r'[A-ZÁÉÍÓÚÂÊÔÀÁÉÍÓÚÂÊÔÀ]?[a-záéíóúâêôàáéíóúâêôà\-]+[\s.!?,;]?\s', text)
+    return re.findall(r'[A-ZÁÉÍÓÚÂÊÔÀÁÉÍÓÚÂÊÔÀ]?[a-záéíóúâêôàáéíóúâêôà\-]+[\s.!?,:;]?\s', text)
 
 def clean(w):
-    endings = ('.', ',', '!', '?')
+    endings = ('.', ',', '!', '?', ':')
 
     w = w.lower().strip()
     for e in endings:
@@ -61,23 +61,23 @@ counter = 0
 print(f'\nFound {counter} errors until now! Checking...\r', end='')
 
 minimum_distances = defaultdict(lambda: 2**32)
+distances = defaultdict(list)
 for line_check in open(argv[1]):
     for word_check in line_check.split():
         word_check = clean(word_check)
 
         if not word_check in words:
-            distances = defaultdict(list)
             for word in words:
                 distance = get_distance(word_check, word)
 
-                if distance <= THRESHOLD and distance < minimum_distances[word_check]:
+                if distance <= THRESHOLD and distance <= minimum_distances[word_check]:
                     distances[word_check, distance].append(word)
-                    minimum_distances[word_check] = distance
+
+                minimum_distances[word_check] = min(minimum_distances[word_check], distance)
             else:
                 counter += 1
                 print(f'Found {counter} errors until now! Checking...\r', end='')
 print()
-
 no_good_suggestions = [word for word, distance in minimum_distances.items() if distance > THRESHOLD]
 
 # Get only the smallests distances
