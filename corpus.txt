@@ -12841,3 +12841,58 @@ Atenciosamente,
 
 Assessoria de Comunicação da Presidência da Funai
 
+
+g1.globo.com
+Submetidas a 'hackers' por 5 dias, urnas eletrônicas têm só duas falhas superficiais, informa TSE
+5-6 minutes
+
+TSE recebeu nesta semana 25 acadêmicos, estudantes e peritos para Teste Público de Segurança. Grupo mudou dados superficiais, mas não conseguiu alterar nome de candidato nem de eleitor.
+
+Urnas eletrônicas que serão utilizadas na eleição 2020 — Foto: Diêgo Holanda/G1
+Urnas eletrônicas que serão utilizadas na eleição 2020 — Foto: Diêgo Holanda/G1
+
+Urnas eletrônicas que serão utilizadas na eleição 2020 — Foto: Diêgo Holanda/G1
+
+Um grupo de peritos da Polícia Federal encontrou duas falhas consideradas superficiais no sistema da urna eletrônica durante a semana do Teste Público de Segurança, informou nesta sexta-feira (28) o Tribunal Superior Eleitoral (TSE).
+
+De acordo com o tribunal, as falhas detectadas não alteram a segurança do processo eleitoral.
+
+De acordo com o secretário de Tecnologia da Informação do TSE, Giuseppe Janino, os peritos conseguiram entrar no sistema que alimenta as urnas eletrônicas com dados de eleitores e de candidatos e com isso quebraram uma barreira de segurança.
+
+Segundo Janino, eles também conseguiram mudar algumas palavras ou expressões – como alterar a inscrição "boletim de urna" para "boletim", por exemplo – mas não obtiveram êxito na tentativa de mudar nome de candidato ou de eleitor.
+
+O secretário explicou que, para a semana de testes públicos, o TSE remove barreiras a fim de que os investigadores tenham facilidades para avançar e descobrir fragilidades. Mas destacou que, mesmo assim, não foi detectada nenhuma falha grave.
+
+“A urna tem 30 barreiras digitais. Para o teste, o TSE retira essas barreiras, dá acesso a informações, algoritmos. Eles têm facilidades para avançar. Encontraram fragilidades, mas não existe nenhum risco. Mesmo assim, vamos trabalhar para corrigir esses pontos e fortalecer a segurança da urna”, afirmou o secretário após a divulgação dos resultados.
+
+TSE faz teste de segurança das urnas eletrônicas
+
+TSE faz teste de segurança das urnas eletrônicas
+
+Os testes públicos tiveram início na última segunda-feira (25). Vinte e cinco investigadores de diversos locais do país, entre os quais policiais federais, acadêmicos, estudantes e profissionais da tecnologia, passaram a semana buscando fragilidades no sistema. Foi a quinta vez que o TSE realizou esses testes, e em outras edições os especialistas também encontraram fragilidades, corrigidas posteriormente.
+
+Os 25 investigadores atuaram em sete grupos e, segundo o TSE,
+
+    não conseguiram alterar os boletins de urna;
+    tentaram usar inteligência artificial para acessar o sistema mas não conseguiram;
+    não encontraram vulnerabilidades nas chaves criptográficas e bibliotecas (no último teste tinha sido identificada fragilidade);
+    mapearam rotina de algoritmos e padrões de urna, mas não quebraram sigilo nem adulteraram informações;
+    não conseguiram entrar no sistema de rede;
+    tentaram usar pulsos elétricos para captar digitação na urna, e assim identificar o voto, mas não conseguiram (no último teste tinham identificado falha, mas os teclados foram blindados).
+
+As duas falhas identificadas pelos peritos da Polícia Federal foram verificadas no grupo que apresentou projeto para extrair conteúdo do sistema, tentar inserir dados na urna e extrair dados de totalização de votos.
+
+“Esta é a quinta edição deste evento, que tem o objetivo de fortalecer o sistema eletrônico de votação, verificar se os recursos implementados na urna atendem as necessidades de segurança. E para correção de eventuais vulnerabilidades que venham a ser detectadas", afirmou a ministra Rosa Weber, presidente do TSE.
+
+Segundo ela, "é o momento de abertura dos sistemas de segurança ao olhos da comunidade científica, partidos, estudantes, é um chamado para que atuem como hackers a fim de identificar falhas na integridade da urna”. De acordo com a ministra, os testes garantirão eleições seguras em 2020.
+
+O resultado apresentado nesta sexta, que identificou as duas fragilidades, é parcial. O TSE apresentará um balanço definitivo em 10 de dezembro. Técnicos do TSE trabalharão para corrigir as falhas, e uma nova rodada de testes será realizada no ano que vem.
+
+Resumo do dia
+
+As notícias que você não pode perder diretamente no seu e-mail.
+Para se inscrever, entre ou crie uma Conta Globo gratuita.
+
+Obrigado!
+
+Você acaba de se inscrever no Resumo do dia.

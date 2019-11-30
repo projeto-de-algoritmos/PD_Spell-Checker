@@ -12,7 +12,7 @@ THRESHOLD = 15
 
 
 def get_words(text):
-    return re.findall(r'[A-ZÁÉÍÓÚÂÊÔÀÁÉÍÓÚÂÊÔÀ]?[a-záéíóúâêôàáéíóúâêôà\-]+[\s.!?,:;"\'()]?\s', text)
+    return re.findall(r'[A-ZÁÉÍÓÚÂÊÔÀÁÉÍÓÚÂÊÔÀ]?[a-záéíóúâêôàáéíóúâãõêôàç\-]+[\s.!?,:;"\'()]?\s', text)
 
 def clean(w):
     endings = ('.', ',', '!', '?', ':', ')', '(', '"', "'")
@@ -107,6 +107,3 @@ for (wrong, distance), suggestions in distances:
     print(f'\t{wrong} -> {suggestions} (distance: {distance})')
 
 print('\nNo good suggestions: ' + ', '.join(no_good_suggestions))
-
-
-# print('minimum_distances', minimum_distances)
