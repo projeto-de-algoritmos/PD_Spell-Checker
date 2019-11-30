@@ -1,6 +1,7 @@
 import re
+import concurrent.futures
 from collections import defaultdict
-from sys import argv
+from sys import argv, exit
 
 import numpy as np
 
@@ -11,10 +12,10 @@ THRESHOLD = 15
 
 
 def get_words(text):
-    return re.findall(r'[A-ZÁÉÍÓÚÂÊÔÀÁÉÍÓÚÂÊÔÀ]?[a-záéíóúâêôàáéíóúâêôà\-]+[\s.!?,:;]?\s', text)
+    return re.findall(r'[A-ZÁÉÍÓÚÂÊÔÀÁÉÍÓÚÂÊÔÀ]?[a-záéíóúâêôàáéíóúâêôà\-]+[\s.!?,:;"\'()]?\s', text)
 
 def clean(w):
-    endings = ('.', ',', '!', '?', ':')
+    endings = ('.', ',', '!', '?', ':', ')', '(', '"', "'")
 
     w = w.lower().strip()
     for e in endings:
@@ -42,10 +43,33 @@ def get_distance(s1, s2):
 
     return M[size_x-1, size_y-1]
 
+def get_max():
+    return 2**32
+
+def calculate_distances(line):
+    minimum_distances = defaultdict(get_max)
+    distances = defaultdict(list)
+
+    for word_check in line.split():
+        word_check = clean(word_check)
+
+        if not word_check in words:
+            for word in words:
+                distance = get_distance(word_check, word)
+
+                if distance <= THRESHOLD and distance <= minimum_distances[word_check]:
+                    distances[word_check, distance].append(word)
+                    minimum_distances[word_check] = distance
+
+    return distances, minimum_distances
+
+
+
 # print(get_distance('TACATG', 'CTACCG'))
 
-if len(argv) < 1:
+if len(argv) < 2:
     print('Incorrect usage! Usage: python3 spellchecker.py [file]')
+    exit(1)
 
 content = open('corpus.txt').read()
 words = get_words(content)
@@ -57,27 +81,21 @@ with open(vocabulary_file, 'w') as vocabulary:
 print(f'Vocabulary saved to {vocabulary_file}!')
 
 print(f'Costs: deletion = {GAP_COST}, substitution = {MIS_COST}')
-counter = 0
-print(f'\nFound {counter} errors until now! Checking...\r', end='')
 
-minimum_distances = defaultdict(lambda: 2**32)
 distances = defaultdict(list)
-for line_check in open(argv[1]):
-    for word_check in line_check.split():
-        word_check = clean(word_check)
+minimum_distances = defaultdict(lambda: 2**32)
 
-        if not word_check in words:
-            for word in words:
-                distance = get_distance(word_check, word)
+lines = []
+with open(argv[1]) as f:
+    lines = f.readlines()
 
-                if distance <= THRESHOLD and distance <= minimum_distances[word_check]:
-                    distances[word_check, distance].append(word)
-
-                minimum_distances[word_check] = min(minimum_distances[word_check], distance)
-            else:
-                counter += 1
-                print(f'Found {counter} errors until now! Checking...\r', end='')
+print('Processing...')
+with concurrent.futures.ProcessPoolExecutor() as executor:
+    for aux_distances, aux_minimum_distances in executor.map(calculate_distances, lines):
+        distances.update(aux_distances)
+        minimum_distances.update(aux_minimum_distances)
 print()
+
 no_good_suggestions = [word for word, distance in minimum_distances.items() if distance > THRESHOLD]
 
 # Get only the smallests distances
