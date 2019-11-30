@@ -1,4 +1,28 @@
-Eu estou digitando aguma coiça erada, me desgulpe. Sera se eu sie escrever? Me mande um e-mail: eu@mail.com
+Eu estou digitando aguma coiça erada, me desgulpe. Sera se eu sie realmente escrever?
+
+Segue trecho de notícia interessante com alguns erros de grafia:
+
+
+Submetidas a 'hackers' por cinco dias, urnas eletrônicas têm só duas falhas superficiais, infrma TSE
+TSE recebeu nesta semana vinte e cinco acadêmicos, estudantes e peritos para Teste Público de Segurança.
+Grupo mudou daos superficiais, mas não conseguiu alterar nome de candidato nem de eletor.
+
+Um grupo de peritos da Polícia Federal encontou duas falhas consideradas superficiais no sistema
+da urna eletrônica durante a semana do Teste Público de Segrança, informou nesta sexta-feira
+o Tribunal Superior Eleitoral.
+
+De acordo com o tribunal, as falgas detectdas não alteram a segurança do processo eleitoral.
+
+De acodo com o secretário de Tecnologia da Informação do TSE, Giuseppe Janino, os peritos
+conguiram entrar no sistema que almnta as urnas eletrônicas com dados de eleitores e de
+candidatos e com isso quebraram uma bareira de segurança.
+
+Segundo Janino, eles também conseuuiram mudar algumas palavras ou expressões (como alterar a
+inscrição "boletim de urna" para "boletim", por exomplo) mas não otiveram êxito na tetativa
+de mudar nome de cndidato ou de eleitor.
+
+
+Me mande um e-mail em eu@mail.com comentando o que você acha.
 
 Grato,
 Atenciosamente,
